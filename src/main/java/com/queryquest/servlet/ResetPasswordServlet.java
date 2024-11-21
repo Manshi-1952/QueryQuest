@@ -24,7 +24,7 @@ public class ResetPasswordServlet extends HttpServlet {
         PreparedStatement preparedStatement = null;
 
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/QueryQuest", "root", "04092002");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/QueryQuest", "root", "0409");
 
             String sql = "SELECT * FROM Users WHERE reset_token = ? AND reset_token_expiry > NOW()";
             preparedStatement = connection.prepareStatement(sql);

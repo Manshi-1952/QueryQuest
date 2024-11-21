@@ -10,7 +10,7 @@ public class RegisterServlet extends HttpServlet {
 
     private String url = "jdbc:mysql://localhost:3306/QueryQuest?useSSL=false&serverTimezone=UTC";
     private String user = "root";
-    private String pwd = "04092002";
+    private String pwd = "0409";
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

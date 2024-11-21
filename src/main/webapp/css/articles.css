@@ -1,0 +1,404 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gill Sans MT", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*#background-container {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    z-index: -1;*/
+/*    overflow: hidden;*/
+/*}*/
+
+body {
+    background: #171a29;
+    background-size: 400% 400%;
+    /*animation: gradientAnimation 15s ease infinite;*/
+    color: #fff;
+    position:relative;
+    display: flex;
+    flex-direction: column; /* Ensure the body uses flexbox */
+    min-height: 100vh; /* Full viewport height */
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Navbar styling*/
+.header{
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+/*.nav-link{*/
+/*    font-size: 1.4rem;*/
+/*    font-weight: 400;*/
+/*    color: #ffffff;*/
+/*}*/
+
+/*.nav-link:hover{*/
+/*    color: #893BAD;*/
+/*}*/
+
+.nav-link {
+    position: relative;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: #b173dc;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+    color: #b173dc;
+}
+.nav-link:hover{
+    color: #b173dc;
+}
+
+.nav-logo {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/*.section-container {*/
+/*    display: flex;*/
+/*    height: 100vh; !* Full viewport height *!*/
+/*    width: 100vw; !* Full viewport width *!*/
+/*}*/
+
+/*.left-section {*/
+/*    width: 30%; !* 30% width for the left section *!*/
+/*    background-color: #f0f0f0; !* Light background color for the left section *!*/
+/*    padding: 20px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.right-section {*/
+/*    width: 70%; !* 70% width for the right section *!*/
+/*    background-color: #ffffff; !* Background color for the right section *!*/
+/*    padding: 20px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*@media (max-width: 768px) {*/
+/*    .section-container {*/
+/*        flex-direction: column; !* Stack sections vertically on smaller screens *!*/
+/*    }*/
+
+/*    .left-section, .right-section {*/
+/*        width: 100%; !* Make both sections 100% width when stacked *!*/
+/*        height: 50%; !* 50% height when stacked *!*/
+/*    }*/
+main {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+section{
+    min-height: 100%;
+}
+.section-container {
+    flex:1;
+    display: flex;
+    height: 100vh; /* Full height */
+}
+
+.left-section, .right-section {
+    width: 48%; /* Adjust width as needed */
+    margin-bottom: 20px; /* Add margin to push content above the footer */
+}
+.left-section {
+    width: 30%;
+    background-color: #171a29;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/*.left-section h1 {*/
+/*    margin-top: 50px; !* Space between navbar and heading *!*/
+/*    padding: 10px;*/
+/*    color: #7a2a9e; !* White color for the heading text *!*/
+/*    font-size: 5rem;*/
+/*    font-weight: 600;*/
+/*}*/
+.articles-heading {
+    background-color: #7a2a9e; /* Pink background */
+    height: 40%; /* Height of the div */
+    text-align: center;
+    padding: 20px; /* Padding for spacing */
+    margin-top: 50px;
+}
+
+.articles-heading h1 {
+    font-size: 3rem; /* Adjusted font size */
+    color: #ffffff; /* Dark text color for contrast */
+    margin: 0; /* Remove default margin */
+}
+
+.articles-heading h2 {
+    font-size: 7rem; /* Adjusted font size */
+    color: #ffffff; /* Dark text color for contrast */
+    margin: 0; /* Remove default margin */
+}
+.container {
+    /* Background color of the container */
+     /* Rounded borders */
+    padding: 20px; /* Padding inside the container */
+    margin: 20px auto; /* Center the container with margin */
+    width: 80%; /* Width of the container */
+    color: #ffffff; /* Text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center the text inside the container */
+}
+
+.container h2 {
+    font-size: 2rem; /* Size of the "Article Category" heading */
+    margin-bottom: 15px; /* Space below the heading */
+    color: #ffffff; /* White color for the heading text */
+}
+
+.container .h3 {
+    display: block;
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin: 10px 0; /* Adds space between the subheadings */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+.container a {
+    text-decoration: none; /* Remove underline */
+    color: #d1d5db; /* Same color as subheadings */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.container .h3:hover {
+    color: #b173dc; /* Changes color on hover */
+}
+
+/* Button Hover Effect */
+a.h3:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #893BAD; /* Change color on hover */
+}
+
+.right-section {
+    width: 70%;
+    background-color: #171a29; /* Background color for the right section */
+    padding:50px;
+    display: flex;
+    flex-wrap: wrap; /* Allow containers to wrap */
+    justify-content: center; /* Center align the containers */
+    overflow: auto;
+}
+
+.container-1 {
+    perspective: 1000px; /* Create a perspective for the 3D effect */
+    margin: 20px;
+    height: 400px; /* Set a height for the flipping card */
+    width: calc(30% - 20px);
+}
+
+.flipper {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Adjust as needed */
+    transition: transform 0.6s; /* Transition effect */
+    transform-style: preserve-3d; /* Preserve the 3D effect */
+}
+
+.flipper:hover {
+    transform: rotateY(180deg); /* Flip effect on hover */
+}
+
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back face when it's not visible */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    border-radius: 10px; /* Round the corners for a clean look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.f1{
+    background-color: rgb(221, 232, 240); /* Change to your desired color */ ;
+}
+
+.f2{
+    background-color: rgb(220, 240, 235); /* Change to your desired color */ ;
+}
+
+.f3{
+    background-color: rgb(251, 220, 237); /* Change to your desired color */ ;
+}
+
+.f4{
+    background-color: rgb(235, 226, 247); /* Change to your desired color */ ;
+}
+
+.f5 {
+    background-color: rgb(221, 232, 240); /* Change to your desired color */;
+}
+
+.f6{
+    background-color: rgb(251, 220, 237); /* Change to your desired color */ ;
+}
+
+
+.front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Box shadow */
+    padding: 30px; /* Padding inside the container */
+    margin: 10px; /* Space between containers */
+}
+
+.front img {
+    max-width: 80%; /* Ensures the image doesn’t overflow */
+    max-height: 80%; /* Ensures the image scales correctly */
+    object-fit: cover;
+}
+.back {
+    display: flex;
+    flex-direction: column; /* Stack child divs vertically */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Box shadow */
+    background-color: #242a3e; /* Background color for each container */
+    color: black; /* Change to your desired text color */
+    padding: 30px; /* Padding inside the container */
+    margin: 10px; /* Space between containers */
+    transform: rotateY(180deg); /* Flip the back side */
+}
+
+/*.container-div {*/
+
+/*    border-radius: 10px; !* Rounded corners *!*/
+/*    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); !* Box shadow *!*/
+/*    padding: 30px; !* Padding inside the container *!*/
+/*    margin: 10px; !* Space between containers *!*/
+/*    width: calc(30% - 20px); !* Adjust width to fit three in a row with margins *!*/
+/*    display: flex;*/
+/*    flex-direction: column; !* Stack child divs vertically *!*/
+/*    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; !* Include background color in transition *!*/
+/*}*/
+
+/*!* Hover effect for container *!*/
+/*.container-div:hover {*/
+/*    transform: scale(1.05); !* Slightly less than before for a more subtle effect *!*/
+/*    background-color: #3a3f52; !* Change background color on hover for contrast *!*/
+/*    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);*/
+/*}*/
+
+.image-div {
+    flex: 1; /* Allow image div to take available space */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.container-image {
+    max-width: 100%; /* Ensure image fits within container */
+    max-height: 150px; /* Set a maximum height for images */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+.content-div {
+    flex: 1; /* Allow content div to take available space */
+    padding: 10px; /* Padding for content */
+    color: white; /* Text color */
+}
+
+
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+    }
+}

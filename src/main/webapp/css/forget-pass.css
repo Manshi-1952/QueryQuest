@@ -1,0 +1,98 @@
+*{
+    margin :0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:"Gill Sans MT";
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.header h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 20px;
+    color: #555;
+}
+
+.container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    text-align: center;
+}
+
+.heading{
+    font-size: 24px;
+}
+form {
+    margin-top: 20px;
+}
+h2{
+    padding-bottom: 5px;
+    text-align: left;
+}
+p{
+    font-size: 15px;
+    color: #555;
+    padding-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 7px; /* Adjust padding to ensure text is not squished */
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px; /* Increase font size */
+    line-height: 1.5; /* Ensure vertical alignment */
+    box-sizing: border-box; /* Ensures padding and border are included in the element’s total width and height */
+}
+
+
+button{
+    width: 100%;
+    padding: 10px;
+    background-color: #893BAD;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+button:hover {
+    background-color: #893BAD;
+}
+
+.footer {
+    margin-top: 20px;
+
+}

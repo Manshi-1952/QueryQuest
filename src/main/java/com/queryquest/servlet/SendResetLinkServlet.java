@@ -14,7 +14,7 @@ public class SendResetLinkServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("email");
 
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/QueryQuest", "root", "04092002")) {
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/QueryQuest", "root", "0409")) {
             String sql = "SELECT * FROM Users WHERE email = ?";
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
                 preparedStatement.setString(1, email);

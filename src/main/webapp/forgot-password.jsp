@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/forget-pass.css">
     <title>Query Quest - Forgot Password</title>
     <style>
         .error-message {
@@ -13,33 +14,28 @@
     </style>
 </head>
 <body>
-<nav>
-    <div class="container">
-        <div class="logo">
-            <a href="index.jsp"><i>Query Quest</i></a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="questions.jsp">Questions</a></li>
-            <li><a href="articles.jsp">Articles</a></li>
-            <li><a href="register.jsp">Register</a></li>
-        </ul>
-    </div>
-</nav>
+<div class="header">
+    <h1>Welcome to Query Quest</h1>
+    <p>Your go-to place to ask questions and share knowledge</p>
+</div>
 
-<h2>Forgot Password</h2>
-<form action="send-reset-link" method="post">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br>
-    <button type="submit">Send Reset Link</button>
-    <% if (request.getParameter("error") != null) { %>
-    <div class="error-message"><%= request.getParameter("error") %></div>
-    <% } %>
-</form>
+<div class="container">
+    <form action="send-reset-link" method="post">
+        <h2>Forgot Something?</h2>
+        <p>Enter your email, and we'll send you a link to reset your password.</p>
 
-<footer>
-    <div class="container">
-        <p>&copy; 2024 Query Quest. All rights reserved.</p>
-    </div>
-</footer>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <button type="submit">Send Reset Link</button>
+        <% if (request.getParameter("error") != null) { %>
+        <div class="error-message"><%= request.getParameter("error") %></div>
+        <% } %>
+    </form>
+</div>
+
+<div class="footer">
+    <p style="font-size: 12px; color: #aaa;">&copy; 2024 Query Quest. All rights reserved.</p>
+</div>
+
 </body>
 </html>
